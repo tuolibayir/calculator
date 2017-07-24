@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>计算器</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		table{
+			background-color: #fff;
+		}
+		tr{
+			height: 50px;
+		}
+		td{
+			width: 50px;
+			background-color: #aedfff;
+			padding: 10px;
+		}
+		.numberkey{
+			text-align: center;
+			cursor: pointer;
+			margin: 10px;
+		}
+		.display{
+			text-align: right;	
+		}
+		.div{
+			padding: 5px;
+			border: solid 4px #aedfff;
+			width: 200px;
+			background-color: #fff;
+			margin: auto;
+		}
+		.hover td:hover{
+			background-color: #7edbff;
+		}
+	</style>
+</head>
+<body>
+<div class="div">
+    <table>
+		<tr>
+			<td id="display" class="display" colspan="4">0</td>
+		</tr>
+		<tr class="hover">
+			<td id="num7" class="numberkey">7</td>
+			<td id="num8" class="numberkey">8</td>
+			<td id="num9" class="numberkey">9</td>
+			<td id="divide" class="numberkey">/</td>
+		</tr>
+		<tr class="hover">
+			<td id="num4" class="numberkey">4</td>
+			<td id="num5" class="numberkey">5</td>
+			<td id="num6" class="numberkey">6</td>
+			<td id="multiply" class="numberkey">*</td>
+		</tr>
+		<tr class="hover">
+			<td id="num1" class="numberkey">1</td>
+			<td id="num2" class="numberkey">2</td>
+			<td id="num3" class="numberkey">3</td>
+			<td id="minus" class="numberkey">-</td>
+		</tr>
+		<tr class="hover">
+			<td id="point" class="numberkey">.</td>
+			<td id="num0" class="numberkey">0</td>
+			<td id="equals" class="numberkey">=</td>
+			<td id="plus" class="numberkey">+</td>
+		</tr>
+		<tr class="hover">
+			<td id="clear" class="numberkey clear" colspan="4"><a>C</a></td>
+		</tr>
+	</table>
+</div>	
+	<script type="text/javascript">
+		var x="";
+		var td_num=document.getElementsByTagName('td');
+		var display=document.getElementById('display');
+		for(var i=0;i<td_num.length;i++){
+			td_num[i].onclick=function(){
+				x+=document.getElementById(this.id).innerHTML;
+				display.innerHTML=x;
+			}
+			document.getElementById('equals').onclick=function(){
+				xx=eval(x);
+				display.innerHTML=xx;
+				x="";
+			}
+			document.getElementById('clear').onclick=function(){
+				display.innerHTML=0;
+			}
+		}
+	</script>
+</body>
+</html>
