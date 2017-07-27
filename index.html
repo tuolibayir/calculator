@@ -72,12 +72,12 @@
 </div>	
 	<script type="text/javascript">
 		var x="";
-		var td_num=document.getElementsByTagName('td');
-		var display=document.getElementById('display');
-		for(var i=0;i<td_num.length;i++){
-			td_num[i].onclick=function(){
-				x+=document.getElementById(this.id).innerHTML;
-				display.innerHTML=x;
+        var td_num=document.getElementsByTagName("td");
+        var display=document.getElementById("display");
+        for(var i=0;i<td_num.length;i++){
+        	td_num[i].onclick=function(){
+                x+=document.getElementById(this.id).innerHTML;
+                display.innerHTML=x;
 			}
 			document.getElementById('equals').onclick=function(){
 				xx=eval(x);
