@@ -75,19 +75,19 @@
         var td_num=document.getElementsByTagName("td");
         var display=document.getElementById("display");
         for(var i=0;i<td_num.length;i++){
-        	td_num[i].onclick=function(){
+            td_num[i].onclick=function(){
                 x+=document.getElementById(this.id).innerHTML;
                 display.innerHTML=x;
-			}
-			document.getElementById('equals').onclick=function(){
-				xx=eval(x);
-				display.innerHTML=xx;
-				x="";
-			}
-			document.getElementById('clear').onclick=function(){
-				display.innerHTML=0;
-			}
-		}
+            }
+            document.getElementById("equals").onclick=function(){
+                xx=eval(x);
+                display.innerHTML=xx;
+                x="";
+            }
+            document.getElementById("clear").onclick=function(){
+                display.innerHTML=0;
+            }
+        }
 
 		function plus(){
 			//加分函数
